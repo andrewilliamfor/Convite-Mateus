@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Anos do Super Mateus - Convite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --mario-red: #E70012;
+            --mario-blue: #0078D7;
+            --mario-yellow: #FBD000;
+            --mario-green: #43B02A;
+            --sky-blue: #5C94FC;
+        }
+
+        body {
+            background-color: #222;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Alinhado ao topo para permitir scroll se necessário */
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .invitation-card {
+            width: 100%;
+            max-width: 400px;
+            background-color: var(--sky-blue);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            border: 6px solid #333;
+            border-radius: 20px;
+            padding-bottom: 80px; /* Espaço para o chão não tapar botões */
+        }
+
+        .mario-title {
+            font-family: 'Luckiest Guy', cursive;
+            text-align: center;
+            line-height: 1.1;
+            padding: 20px 10px;
+            z-index: 10;
+        }
+
+        .mario-letter {
+            display: inline-block;
+            font-size: 2.8rem;
+            text-shadow: 3px 3px 0px #000;
+            -webkit-text-stroke: 1px black;
+            animation: bounce 2s infinite ease-in-out;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .letter-red { color: var(--mario-red); }
+        .letter-blue { color: var(--mario-blue); }
+        .letter-yellow { color: var(--mario-yellow); }
+        .letter-green { color: var(--mario-green); }
+
+        .ground {
+            background: linear-gradient(#885018 25%, #603813 25%);
+            background-size: 100% 30px;
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            border-top: 4px solid #000;
+            z-index: 5;
+        }
+
+        .btn-mario {
+            font-family: 'Luckiest Guy', cursive;
+            text-align: center;
+            padding: 12px 15px;
+            margin: 8px 20px;
+            border-radius: 12px;
+            border: 3px solid #000;
+            font-size: 1.2rem;
+            color: white;
+            text-shadow: 2px 2px 0px #000;
+            transition: all 0.2s;
+            display: block;
+            text-decoration: none;
+            box-shadow: 0 5px 0px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 10;
+        }
+
+        .btn-mario:active {
+            transform: translateY(3px);
+            box-shadow: 0 2px 0px rgba(0,0,0,0.3);
+        }
+
+        .btn-confirm { background-color: var(--mario-green); }
+        .btn-location { background-color: var(--mario-red); }
+        .btn-gift { background-color: var(--mario-yellow); color: #000; text-shadow: none; }
+
+        .info-box {
+            background: rgba(255,255,255,0.9);
+            border: 3px solid #000;
+            margin: 10px 20px;
+            padding: 12px;
+            border-radius: 8px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.6rem;
+            line-height: 1.5;
+            color: #333;
+            z-index: 10;
+        }
+
+        .floating-coin {
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            background-color: var(--mario-yellow);
+            border-radius: 50%;
+            border: 2px solid #000;
+            animation: spin 1.5s infinite linear;
+            z-index: 1;
+        }
+
+        @keyframes spin {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <!-- Elementos Decorativos -->
+        <div class="floating-coin" style="top: 10%; left: 5%;"></div>
+        <div class="floating-coin" style="top: 15%; right: 8%;"></div>
+        
+        <!-- Título -->
+        <div class="mario-title">
+            <span class="mario-letter letter-red">2</span>
+            <span class="mario-letter letter-blue">A</span>
+            <span class="mario-letter letter-yellow">N</span>
+            <span class="mario-letter letter-green">O</span>
+            <span class="mario-letter letter-red">S</span>
+            <div style="font-size: 1.2rem; color: white; text-shadow: 2px 2px black; margin: 5px 0;">DO</div>
+            <span class="mario-letter letter-blue" style="font-size: 2.2rem;">S</span>
+            <span class="mario-letter letter-red" style="font-size: 2.2rem;">U</span>
+            <span class="mario-letter letter-yellow" style="font-size: 2.2rem;">P</span>
+            <span class="mario-letter letter-green" style="font-size: 2.2rem;">E</span>
+            <span class="mario-letter letter-blue" style="font-size: 2.2rem;">R</span>
+            <br>
+            <span class="mario-letter letter-red" style="font-size: 3.2rem;">MATEUS</span>
+        </div>
+
+        <!-- Bloco de Informações -->
+        <div class="info-box">
+            <p>📅 DATA: 07/02/2026</p>
+            <p>⏰ HORA: 18:30H</p>
+            <p style="margin-top: 5px;">📍 LOCAL: Clube Recreativo B-25 (Av. Borges de Melo, 855)</p>
+        </div>
+
+        <!-- Botões -->
+        <div class="flex flex-col mb-4">
+            <a href="https://wa.me/5585988777649?text=Confirmo+presença+no+aniversário+do+Super+Mateus" class="btn-mario btn-confirm">
+                ✅ CONFIRMAR PRESENÇA
+            </a>
+            
+            <a href="https://maps.app.goo.gl/EtzP2KJbTKkQHpgi9"_blank" class="btn-mario btn-location">
+                📍 LOCAL DO EVENTO
+            </a>
+            
+            <a href="#" class="btn-mario btn-gift" onclick="showGiftModal(event)">
+                🎁 SUGESTÃO DE PRESENTE
+            </a>
+        </div>
+
+        <!-- Chão -->
+        <div class="ground"></div>
+    </div>
+
+    <!-- Modal de Presentes -->
+    <div id="gift-modal" class="fixed inset-0 bg-black bg-opacity-80 hidden z-50 flex justify-center items-center p-6">
+        <div class="bg-white border-4 border-black p-6 rounded-xl max-w-xs w-full text-center shadow-2xl">
+            <h3 class="font-bold text-2xl mb-4 text-red-600" style="font-family: 'Luckiest Guy';">POWER UP!</h3>
+            <p class="text-gray-800 mb-6 font-medium">Brinquedos, Calçados (tam 25) e Roupas (tam 3 e 4 anos)</p>
+            <button onclick="closeGiftModal()" class="bg-blue-600 text-white px-6 py-2 rounded-full border-2 border-black font-bold uppercase tracking-wider">OK!</button>
+        </div>
+    </div>
+
+    <script>
+        function showGiftModal(e) {
+            e.preventDefault();
+            document.getElementById('gift-modal').classList.remove('hidden');
+        }
+
+        function closeGiftModal() {
+            document.getElementById('gift-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
+
